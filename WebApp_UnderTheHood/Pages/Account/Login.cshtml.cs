@@ -34,6 +34,7 @@ namespace WebApp_UnderTheHood.Pages.Account
                 var claimsIdentity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
+                //if not authenticaed https://youtu.be/sogS0DtejVA?si=vVJedBSsHQXmsd70&t=4449
                 await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
                 // Will serialize the claimsPrincipal into a string and store them in a cookie in the HTTP context.
                 // HTTP context is the current request context, which contains information about the request and response.

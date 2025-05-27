@@ -5,6 +5,7 @@ builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = "MyCookieAuth";
 }).AddCookie("MyCookieAuth");
+//if not authenticaed https://youtu.be/sogS0DtejVA?si=vVJedBSsHQXmsd70&t=4449
 
 builder.Services.AddRazorPages();
 
@@ -22,6 +23,7 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
+//app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();
