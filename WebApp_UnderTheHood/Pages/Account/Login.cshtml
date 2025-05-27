@@ -1,0 +1,29 @@
+﻿@page
+@model WebApp_UnderTheHood.Pages.Account.LoginModel
+@{
+}
+
+<div class="container border" style="padding:20px">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="LoginCredential.Username"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="LoginCredential.Username" class="form-control" />
+            </div>
+            <span asp-validation-for="LoginCredential.Username" class="text-danger"></span>
+            <div class="col-2">
+                <label asp-for="LoginCredential.Password"></label>
+            </div>
+            <div class="col-5">
+                <input type="password" asp-for="LoginCredential.Password" class="form-control" />
+            </div>
+            <span asp-validation-for="LoginCredential.Password" class="text-danger"></span>
+            <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Login" />
+            </div>
+        </div>
+    </form>
+</div>
